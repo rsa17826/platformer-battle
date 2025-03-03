@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://dalwdxxj080mf"]
+
+[ext_resource type="Script" path="res://addons/sprite-mask/sprite.gd" id="1_jy7js"]
+[ext_resource type="Texture2D" uid="uid://c4xmlkxo1tsjj" path="res://addons/sprite-mask/test_images/cube_base.png" id="2_gka2p"]
+[ext_resource type="Texture2D" uid="uid://d213topv4tlux" path="res://addons/sprite-mask/test_images/cube_map_texture.png" id="3_b773n"]
+[ext_resource type="Texture2D" uid="uid://ycla7hr2jepq" path="res://addons/sprite-mask/test_images/cube_skin_texture.png" id="4_2vcql"]
+
+[sub_resource type="Image" id="Image_r7euo"]
+data = {
+"data": PackedByteArray(100, 0, 76, 255, 100, 0, 76, 255, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 255, 100, 0, 76, 255, 100, 0, 76, 255, 100, 0, 76, 0, 100, 0, 76, 0, 155, 14, 62, 0, 155, 14, 62, 0, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 255, 100, 0, 76, 0, 100, 0, 76, 0, 155, 14, 62, 0, 155, 14, 62, 0, 155, 14, 62, 0, 155, 14, 62, 0, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 0, 155, 14, 62, 0, 155, 14, 62, 0, 155, 14, 62, 255, 155, 14, 62, 255, 155, 14, 62, 0, 155, 14, 62, 0, 100, 0, 76, 0, 100, 0, 76, 0, 155, 14, 62, 0, 155, 14, 62, 0, 155, 14, 62, 255, 155, 14, 62, 255, 155, 14, 62, 0, 155, 14, 62, 0, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 0, 155, 14, 62, 0, 155, 14, 62, 0, 155, 14, 62, 0, 155, 14, 62, 0, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 255, 100, 0, 76, 0, 100, 0, 76, 0, 155, 14, 62, 0, 155, 14, 62, 0, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 255, 100, 0, 76, 255, 100, 0, 76, 255, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 0, 100, 0, 76, 255, 100, 0, 76, 255),
+"format": "RGBA8",
+"height": 8,
+"mipmaps": false,
+"width": 8
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_7ad82"]
+image = SubResource("Image_r7euo")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="SpriteMask" type="Sprite2D" parent="."]
+texture = SubResource("ImageTexture_7ad82")
+script = ExtResource("1_jy7js")
+base_texture = ExtResource("2_gka2p")
+map_texture = ExtResource("3_b773n")
+skin_texture = ExtResource("4_2vcql")

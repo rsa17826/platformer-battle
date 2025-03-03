@@ -1,0 +1,62 @@
+[gd_scene load_steps=12 format=3 uid="uid://w87xknvpid50"]
+
+[ext_resource type="Script" path="res://scenes/spike/spike.gd" id="1_25fdf"]
+[ext_resource type="Script" path="res://scenes/spike/sprite manager.gd" id="2_8luki"]
+[ext_resource type="Texture2D" uid="uid://53ga8t5mxhnx" path="res://art/spike orange.png" id="2_dqi4c"]
+[ext_resource type="Texture2D" uid="uid://cfrtwul5vtvja" path="res://art/spike green.png" id="2_dw6wc"]
+[ext_resource type="Texture2D" uid="uid://ua42s55xvxyo" path="res://art/spike yellow.png" id="5_f12dc"]
+[ext_resource type="Texture2D" uid="uid://b4q7unas3fpjy" path="res://art/spike blue.png" id="6_a5tpj"]
+[ext_resource type="Texture2D" uid="uid://co22e3j6m40tb" path="res://art/spike red.png" id="7_prjsi"]
+[ext_resource type="Texture2D" uid="uid://bc72lmtd26ojf" path="res://art/spike dark orange.png" id="8_mokaa"]
+[ext_resource type="Texture2D" uid="uid://jeydocysr108" path="res://art/spike dark green.png" id="9_e1agb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3yt3l"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_48yle"]
+radius = 2.0
+
+[node name="spike" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_25fdf")
+
+[node name="sprites" type="Node2D" parent="."]
+script = ExtResource("2_8luki")
+
+[node name="green" type="Sprite2D" parent="sprites"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dw6wc")
+
+[node name="orange" type="Sprite2D" parent="sprites"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dqi4c")
+
+[node name="yellow" type="Sprite2D" parent="sprites"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_f12dc")
+
+[node name="blue" type="Sprite2D" parent="sprites"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_a5tpj")
+
+[node name="red" type="Sprite2D" parent="sprites"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_prjsi")
+
+[node name="dark orange" type="Sprite2D" parent="sprites"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_mokaa")
+
+[node name="dark green" type="Sprite2D" parent="sprites"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_e1agb")
+
+[node name="area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_3yt3l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="area2D"]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_48yle")

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://42qedefqv1s1"]
+
+[node name="gameover" type="Control"]
+custom_minimum_size = Vector2(480, 480)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "game over"
+
+[node name="survival time" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "x sec"

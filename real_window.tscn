@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://br5fokt8c2qnh"]
+
+[ext_resource type="PackedScene" uid="uid://c86vld25vh6sp" path="res://window.tscn" id="1_0i13f"]
+
+[node name="realWindow" type="Window"]
+position = Vector2i(0, 36)
+size = Vector2i(480, 480)
+unresizable = true
+borderless = true
+always_on_top = true
+
+[node name="window" parent="." instance=ExtResource("1_0i13f")]
